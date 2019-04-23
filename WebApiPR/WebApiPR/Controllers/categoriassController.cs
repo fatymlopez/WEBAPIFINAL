@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class categoriassController : ApiController
     {
-        private ModeloDB db = new ModeloDB();
+        private ModelosBD db = new ModelosBD();
 
         // GET: api/categoriass
         public IQueryable<categorias> Getcategorias()

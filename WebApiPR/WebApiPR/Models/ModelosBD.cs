@@ -5,10 +5,10 @@ namespace WebApiPR.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ModeloDB : DbContext
+    public partial class ModelosBD : DbContext
     {
-        public ModeloDB()
-            : base("name=ModeloDB")
+        public ModelosBD()
+            : base("name=ModelosBD")
         {
         }
 

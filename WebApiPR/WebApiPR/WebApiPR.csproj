@@ -186,7 +186,7 @@
     <Compile Include="Models\cliente.cs" />
     <Compile Include="Models\detallereservacion.cs" />
     <Compile Include="Models\estados.cs" />
-    <Compile Include="Models\ModeloDB.cs" />
+    <Compile Include="Models\ModelosBD.cs" />
     <Compile Include="Models\productos.cs" />
     <Compile Include="Models\reservacion.cs" />
     <Compile Include="Models\ubicacion.cs" />
@@ -223,6 +223,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

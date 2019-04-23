@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class ubicacionsController : ApiController
     {
-        private ModeloDB db = new ModeloDB();
+        private ModelosBD db = new ModelosBD();
 
         // GET: api/ubicacions
         public IQueryable<ubicacion> Getubicacion()

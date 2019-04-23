@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class clientesController : ApiController
     {
-        private ModeloDB db = new ModeloDB();
+        private ModelosBD db = new ModelosBD();
 
         // GET: api/clientes
         public IQueryable<cliente> Getcliente()
