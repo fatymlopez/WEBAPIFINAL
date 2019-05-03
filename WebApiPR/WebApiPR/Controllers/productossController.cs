@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class productossController : ApiController
     {
-        private ModelosBD db = new ModelosBD();
+        private Modeldb db = new Modeldb();
 
         // GET: api/productoss
         public IQueryable<productos> Getproductos()

@@ -5,10 +5,10 @@ namespace WebApiPR.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ModelosBD : DbContext
+    public partial class Modeldb : DbContext
     {
-        public ModelosBD()
-            : base("name=ModelosBD")
+        public Modeldb()
+            : base("name=Modeldb")
         {
         }
 
@@ -96,8 +96,7 @@ namespace WebApiPR.Models
             modelBuilder.Entity<reservacion>()
                 .HasMany(e => e.detallereservacion)
                 .WithRequired(e => e.reservacion)
-                .HasForeignKey(e => e.idreservacion)
-                .WillCascadeOnDelete(false);
+                .HasForeignKey(e => e.idreservacion);
 
             modelBuilder.Entity<ubicacion>()
                 .Property(e => e.nomubicacion)

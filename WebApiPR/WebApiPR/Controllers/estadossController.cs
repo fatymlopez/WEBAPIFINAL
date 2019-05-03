@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class estadossController : ApiController
     {
-        private ModelosBD db = new ModelosBD();
+        private Modeldb db = new Modeldb();
 
         // GET: api/estadoss
         public IQueryable<estados> Getestados()

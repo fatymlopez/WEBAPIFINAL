@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class reservacionsController : ApiController
     {
-        private ModelosBD db = new ModelosBD();
+        private Modeldb db = new Modeldb();
 
         // GET: api/reservacions
         public IQueryable<reservacion> Getreservacion()

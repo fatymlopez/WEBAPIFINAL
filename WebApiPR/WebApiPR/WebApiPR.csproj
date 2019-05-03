@@ -186,7 +186,7 @@
     <Compile Include="Models\cliente.cs" />
     <Compile Include="Models\detallereservacion.cs" />
     <Compile Include="Models\estados.cs" />
-    <Compile Include="Models\ModelosBD.cs" />
+    <Compile Include="Models\Modeldb.cs" />
     <Compile Include="Models\productos.cs" />
     <Compile Include="Models\reservacion.cs" />
     <Compile Include="Models\ubicacion.cs" />
