@@ -16,11 +16,16 @@ namespace WebApiPR.Controllers
     public class productossController : ApiController
     {
         private Modeldb db = new Modeldb();
-
+        public productossController()
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.LazyLoadingEnabled = true;
+        }
         // GET: api/productoss
         public IQueryable<productos> Getproductos()
         {
-            return db.productos;
+            //return db.productos;
+            return db.productos.Include(dtproductos => dtproductos.categorias).Include(dtproductos => dtproductos.estados);
         }
 
         // GET: api/productoss/5

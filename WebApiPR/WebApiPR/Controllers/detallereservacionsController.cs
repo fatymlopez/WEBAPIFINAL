@@ -16,11 +16,18 @@ namespace WebApiPR.Controllers
     public class detallereservacionsController : ApiController
     {
         private Modeldb db = new Modeldb();
+        public detallereservacionsController()
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.LazyLoadingEnabled = true;
+        }
 
         // GET: api/detallereservacions
         public IQueryable<detallereservacion> Getdetallereservacion()
         {
-            return db.detallereservacion;
+            // return db.detallereservacion;
+
+            return db.detallereservacion.Include(dtreserva => dtreserva.productos).Include(dtreserva => dtreserva.reservacion);
         }
 
         // GET: api/detallereservacions/5

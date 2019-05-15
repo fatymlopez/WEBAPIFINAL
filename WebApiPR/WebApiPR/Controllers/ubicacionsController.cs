@@ -16,7 +16,11 @@ namespace WebApiPR.Controllers
     public class ubicacionsController : ApiController
     {
         private Modeldb db = new Modeldb();
-
+        public ubicacionsController()
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.LazyLoadingEnabled = true;
+        }
         // GET: api/ubicacions
         public IQueryable<ubicacion> Getubicacion()
         {

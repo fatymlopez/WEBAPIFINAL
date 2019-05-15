@@ -16,6 +16,11 @@ namespace WebApiPR.Controllers
     public class clientesController : ApiController
     {
         private Modeldb db = new Modeldb();
+        public clientesController()
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.LazyLoadingEnabled = true;
+        }
 
         // GET: api/clientes
         public IQueryable<cliente> Getcliente()

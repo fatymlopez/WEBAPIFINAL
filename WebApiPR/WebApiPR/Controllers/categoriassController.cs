@@ -16,6 +16,11 @@ namespace WebApiPR.Controllers
     public class categoriassController : ApiController
     {
         private Modeldb db = new Modeldb();
+        public categoriassController()
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.LazyLoadingEnabled = true;
+        }
 
         // GET: api/categoriass
         public IQueryable<categorias> Getcategorias()

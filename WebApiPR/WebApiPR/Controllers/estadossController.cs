@@ -16,7 +16,11 @@ namespace WebApiPR.Controllers
     public class estadossController : ApiController
     {
         private Modeldb db = new Modeldb();
-
+        public estadossController()
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.LazyLoadingEnabled = true;
+        }
         // GET: api/estadoss
         public IQueryable<estados> Getestados()
         {
