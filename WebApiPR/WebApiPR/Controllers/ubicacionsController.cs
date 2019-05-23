@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class ubicacionsController : ApiController
     {
-        private Modeldb db = new Modeldb();
+        private ModelFinal db = new ModelFinal();
         public ubicacionsController()
         {
             db.Configuration.ProxyCreationEnabled = false;

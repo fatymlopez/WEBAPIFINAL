@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class estadossController : ApiController
     {
-        private Modeldb db = new Modeldb();
+        private ModelFinal db = new ModelFinal();
         public estadossController()
         {
             db.Configuration.ProxyCreationEnabled = false;

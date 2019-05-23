@@ -15,8 +15,11 @@ namespace WebApiPR.Controllers
 {
     public class usuappsController : ApiController
     {
-        private Modeldb db = new Modeldb();
+        private ModelFinal db = new ModelFinal();
+        public usuappsController()
+        {
 
+        }
         // GET: api/usuapps
         public IQueryable<usuapp> Getusuapp()
         {

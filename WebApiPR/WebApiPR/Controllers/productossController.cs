@@ -15,12 +15,13 @@ namespace WebApiPR.Controllers
 {
     public class productossController : ApiController
     {
-        private Modeldb db = new Modeldb();
+        private ModelFinal db = new ModelFinal();
         public productossController()
         {
             db.Configuration.ProxyCreationEnabled = false;
             db.Configuration.LazyLoadingEnabled = true;
         }
+
         // GET: api/productoss
         public IQueryable<productos> Getproductos()
         {

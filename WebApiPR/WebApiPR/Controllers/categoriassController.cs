@@ -15,7 +15,7 @@ namespace WebApiPR.Controllers
 {
     public class categoriassController : ApiController
     {
-        private Modeldb db = new Modeldb();
+        private ModelFinal db = new ModelFinal();
         public categoriassController()
         {
             db.Configuration.ProxyCreationEnabled = false;

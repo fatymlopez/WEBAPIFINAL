@@ -15,13 +15,12 @@ namespace WebApiPR.Controllers
 {
     public class clientesController : ApiController
     {
-        private Modeldb db = new Modeldb();
+        private ModelFinal db = new ModelFinal();
         public clientesController()
         {
             db.Configuration.ProxyCreationEnabled = false;
             db.Configuration.LazyLoadingEnabled = true;
         }
-
         // GET: api/clientes
         public IQueryable<cliente> Getcliente()
         {
@@ -39,6 +38,20 @@ namespace WebApiPR.Controllers
             }
 
             return Ok(cliente);
+        }
+
+        [HttpPost]
+        [ResponseType(typeof(cliente))]
+        public IHttpActionResult GetLogin(cliente user)
+        {
+            cliente result = null;
+            result = db.cliente.FirstOrDefault(u => u.emailcl == user.emailcl && u.passcl == user.passcl);
+            if (result == null)
+            {
+             return NotFound();
+            }
+
+            return Ok(result);
         }
 
         // PUT: api/clientes/5

@@ -15,16 +15,17 @@ namespace WebApiPR.Controllers
 {
     public class reservacionsController : ApiController
     {
-        private Modeldb db = new Modeldb();
+        private ModelFinal db = new ModelFinal();
         public reservacionsController()
         {
             db.Configuration.ProxyCreationEnabled = false;
             db.Configuration.LazyLoadingEnabled = true;
         }
+
         // GET: api/reservacions
         public IQueryable<reservacion> Getreservacion()
         {
-            // return db.reservacion;
+            //return db.reservacion;
             return db.reservacion.Include(dbreserva => dbreserva.detallereservacion).Include(dbreserva => dbreserva.cliente).Include(dbreserva => dbreserva.ubicacion);
         }
 
